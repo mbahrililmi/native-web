@@ -33,7 +33,7 @@ if (isset($_POST["submit"])) {
         Nama Mahasiswa : <input type="text" name="nama"><br>
         NPM : <input type="text" name="npm"><br>
         Kelas :
-        <select name="kategori">
+        <select name="kelas">
             <option value="1A">1A</option>
             <option value="1B">1B</option>
         </select><br>
