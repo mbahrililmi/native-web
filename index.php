@@ -22,25 +22,25 @@ $result = mysqli_query($conn, $query);
     <table border="1" width="100%">
         <tr>
             <th>ID</th>
-            <th>Action</th>
             <th>Nama Mahasiswa</th>
             <th>NPM</th>
             <th>Kelas</th>
             <th>Telpon</th>
             <th>Email</th>
+            <th>Action</th>
         </tr>
         <?php while ($row = mysqli_fetch_assoc($result)) { ?>
             <tr>
                 <td><?php echo $row["id"] ?></td>
-                <td>
-                    <a href="edit.php?id=<?php echo $row["id"] ?>">Edit</a>
-                    <a href="hapus.php?id=<?php echo $row["id"] ?>">Hapus</a>
-                </td>
                 <td><?php echo $row["nama"] ?></td>
                 <td><?php echo $row["npm"] ?></td>
                 <td><?php echo $row["kelas"] ?></td>
                 <td><?php echo $row["telpon"] ?></td>
                 <td><?php echo $row["email"] ?></td>
+                <td>
+                    <a href="edit.php?id=<?php echo $row["id"] ?>">Edit</a>
+                    <a href="hapus.php?id=<?php echo $row["id"] ?>">Hapus</a>
+                </td>
             </tr>
         <?php } ?>
     </table>
