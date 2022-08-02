@@ -1,8 +1,7 @@
 <?php
 
 // cek session (jika tidak menggunakan login hapus ini)
-// include 'cek_session.php';
-// cek session
+include 'cek_session.php';
 
 
 include 'koneksi.php';
@@ -22,6 +21,9 @@ $result = mysqli_query($conn, $query);
 
 <body>
     <h1>Data Barang</h1>
+    <h2>
+        <?php echo $_SESSION['username']; ?>
+    </h2>
     <p><a href="tambah.php">Tambah Barang</a></p>
     <p><a href="cetak.php">Cetak Barang</a></p>
     <p style="text-align:right ;">
