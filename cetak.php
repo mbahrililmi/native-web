@@ -1,4 +1,6 @@
 <?php
+
+// koneksi database
 include 'koneksi.php';
 
 $query = "SELECT * FROM mahasiswa";

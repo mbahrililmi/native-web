@@ -1,4 +1,10 @@
 <?php
+
+// cek session (jika tidak menggunakan login hapus ini)
+// include 'cek_session.php';
+// cek session
+
+
 include 'koneksi.php';
 
 $query = "SELECT * FROM mahasiswa";
@@ -18,6 +24,9 @@ $result = mysqli_query($conn, $query);
     <h1>Data Barang</h1>
     <p><a href="tambah.php">Tambah Barang</a></p>
     <p><a href="cetak.php">Cetak Barang</a></p>
+    <p style="text-align:right ;">
+        <a href="logout.php">Logout</a>
+    </p>
 
     <table border="1" width="100%">
         <tr>
