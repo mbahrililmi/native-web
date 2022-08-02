@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "praktikum");
+include 'koneksi.php';
 
 $id = $_GET["id"];
 

@@ -16,13 +16,10 @@ $result = mysqli_query($conn, $query);
 
 <body>
     <h1>Data Barang</h1>
-    <p><a href="tambah.php">Tambah Barang</a></p>
-    <p><a href="cetak.php">Cetak Barang</a></p>
-
+    <p><a href="index.php">Kembali</a></p>
     <table border="1" width="100%">
         <tr>
             <th>ID</th>
-            <th>Action</th>
             <th>Nama Mahasiswa</th>
             <th>NPM</th>
             <th>Kelas</th>
@@ -32,10 +29,6 @@ $result = mysqli_query($conn, $query);
         <?php while ($row = mysqli_fetch_assoc($result)) { ?>
             <tr>
                 <td><?php echo $row["id"] ?></td>
-                <td>
-                    <a href="edit.php?id=<?php echo $row["id"] ?>">Edit</a>
-                    <a href="hapus.php?id=<?php echo $row["id"] ?>">Hapus</a>
-                </td>
                 <td><?php echo $row["nama"] ?></td>
                 <td><?php echo $row["npm"] ?></td>
                 <td><?php echo $row["kelas"] ?></td>
@@ -44,6 +37,9 @@ $result = mysqli_query($conn, $query);
             </tr>
         <?php } ?>
     </table>
+    <script>
+        window.print();
+    </script>
 </body>
 
 </html>

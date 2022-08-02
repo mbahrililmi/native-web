@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "praktikum");
+include 'koneksi.php';
 
 $id = $_GET["id"];
 
@@ -34,6 +34,7 @@ if (isset($_POST["submit"])) {
 </head>
 
 <body>
+    <p><a href="index.php">Kembali</a></p>
     <h1>Edit Data Barang</h1>
     <form action="" method="POST">
         Nama Mahasiswa : <input type="text" name="nama" value="<?php echo $rowa["nama"] ?>"><br>
@@ -41,11 +42,11 @@ if (isset($_POST["submit"])) {
         Kelas :
         <select name="kelas">
             <option value="1A" <?php if ($rowa["kelas"] == '1A') {
-                                        echo "SELECTED";
-                                    } ?>>1A</option>
+                                    echo "SELECTED";
+                                } ?>>1A</option>
             <option value="1B" <?php if ($rowa["kelas"] == '1B') {
-                                            echo "SELECTED";
-                                        } ?>>1B</option>
+                                    echo "SELECTED";
+                                } ?>>1B</option>
         </select><br>
         Telpon : <input type="text" name="telpon" value="<?php echo $rowa["telpon"] ?>"><br>
         Email : <input type="text" name="email" value="<?php echo $rowa["email"] ?>"><br>

@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "praktikum");
+include 'koneksi.php';
 
 if (isset($_POST["submit"])) {
 
@@ -28,6 +28,7 @@ if (isset($_POST["submit"])) {
 </head>
 
 <body>
+    <p><a href="index.php">Kembali</a></p>
     <h1>Tambah Data Barang</h1>
     <form action="" method="POST">
         Nama Mahasiswa : <input type="text" name="nama"><br>
