@@ -15,7 +15,7 @@ $result = mysqli_query($conn, $query);
 </head>
 
 <body>
-    <h1>Data Barang</h1>
+    <h1>Cetak Data Barang</h1>
     <p><a href="index.php">Kembali</a></p>
     <table border="1" width="100%">
         <tr>
