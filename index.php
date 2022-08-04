@@ -3,7 +3,7 @@
 // cek session (jika tidak menggunakan login hapus ini)
 include 'cek_session.php';
 
-
+// koneksi database
 include 'koneksi.php';
 
 $query = "SELECT * FROM mahasiswa";
@@ -21,11 +21,13 @@ $result = mysqli_query($conn, $query);
 
 <body>
     <h1>Data Barang</h1>
-    <h2>
+    <!-- <h2>
         <?php echo $_SESSION['username']; ?>
-    </h2>
+    </h2> -->
     <p><a href="tambah.php">Tambah Barang</a></p>
     <p><a href="cetak.php">Cetak Barang</a></p>
+
+    <!-- logout -->
     <p style="text-align:right ;">
         <a href="logout.php">Logout</a>
     </p>
@@ -50,7 +52,7 @@ $result = mysqli_query($conn, $query);
                 <td><?php echo $row["email"] ?></td>
                 <td>
                     <a href="edit.php?id=<?php echo $row["id"] ?>">Edit</a>
-                    <a href="hapus.php?id=<?php echo $row["id"] ?>">Hapus</a>
+                    <a href="hapus.php?id=<?php echo $row["id"] ?>" onclick="return confirm('Apakah yakin ingin menghapus data ini?')">Hapus</a>
                 </td>
             </tr>
         <?php } ?>

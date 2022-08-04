@@ -43,12 +43,8 @@ if (isset($_POST["submit"])) {
         NPM : <input type="text" name="npm" value="<?php echo $rowa["npm"] ?>"><br>
         Kelas :
         <select name="kelas">
-            <option value="1A" <?php if ($rowa["kelas"] == '1A') {
-                                    echo "SELECTED";
-                                } ?>>1A</option>
-            <option value="1B" <?php if ($rowa["kelas"] == '1B') {
-                                    echo "SELECTED";
-                                } ?>>1B</option>
+            <option value="1A" <?php if ($rowa["kelas"] == '1A') { echo "selected"; } ?>>1A</option>
+            <option value="1B" <?php if ($rowa["kelas"] == '1B') { echo "selected"; } ?>>1B</option>
         </select><br>
         Telpon : <input type="text" name="telpon" value="<?php echo $rowa["telpon"] ?>"><br>
         Email : <input type="text" name="email" value="<?php echo $rowa["email"] ?>"><br>
