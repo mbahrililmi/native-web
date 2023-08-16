@@ -32,21 +32,21 @@ if (isset($_POST["submit"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Barang</title>
+    <title>Tambah Mahasiswa</title>
 </head>
 
 <body>
     <p><a href="index.php">Kembali</a></p>
-    <h1>Edit Data Barang</h1>
+    <h1>Edit Data Mahasiswa</h1>
     <form action="" method="POST">
         Nama Mahasiswa : <input type="text" name="nama" value="<?php echo $rowa["nama"] ?>"><br>
-        NPM : <input type="text" name="npm" value="<?php echo $rowa["npm"] ?>"><br>
+        NPM : <input type="number" name="npm" value="<?php echo $rowa["npm"] ?>"><br>
         Kelas :
         <select name="kelas">
             <option value="1A" <?php if ($rowa["kelas"] == '1A') { echo "selected"; } ?>>1A</option>
             <option value="1B" <?php if ($rowa["kelas"] == '1B') { echo "selected"; } ?>>1B</option>
         </select><br>
-        Telpon : <input type="text" name="telpon" value="<?php echo $rowa["telpon"] ?>"><br>
+        Telpon : <input type="number" name="telpon" value="<?php echo $rowa["telpon"] ?>"><br>
         Email : <input type="text" name="email" value="<?php echo $rowa["email"] ?>"><br>
         <button type="submit" name="submit">Simpan</button>
     </form>

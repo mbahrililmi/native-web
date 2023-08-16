@@ -16,16 +16,16 @@ $result = mysqli_query($conn, $query);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Barang</title>
+    <title>Data Mahasiswa</title>
 </head>
 
 <body>
-    <h1>Data Barang</h1>
+    <h1>Data mahasiswa</h1>
     <!-- <h2>
         <?php echo $_SESSION['username']; ?>
     </h2> -->
-    <p><a href="tambah.php">Tambah Barang</a></p>
-    <p><a href="cetak.php">Cetak Barang</a></p>
+    <p><a href="tambah.php">Tambah mahasiswa</a></p>
+    <p><a href="cetak.php">Cetak mahasiswa</a></p>
 
     <!-- logout -->
     <p style="text-align:right ;">
